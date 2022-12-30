@@ -1,0 +1,7 @@
+.Weather {
+  margin: 0 auto;
+  max-width: 850px;
+}
+.Weather .submit {
+  margin-left: 80px;
+}
