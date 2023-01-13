@@ -3,6 +3,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./Weather.css";
 import sunlight from "./sunlight.svg";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 import { MagnifyingGlass } from "react-loader-spinner";
 
 export default function Weather() {
@@ -21,9 +23,10 @@ export default function Weather() {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
+      date: new Date(response.data.dt * 1000),
     });
   }
-  let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=74e718c96dc64467c77303080c47c11d&units=metric`;
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=tehran&appid=5f472b7acba333cd8a035ea85a0d4d4c&units=metric`;
   axios.get(url).then(displayDescription);
 
   if (data.set) {
@@ -39,13 +42,14 @@ export default function Weather() {
             />
             <input type="serach" placeholder="search a city" className="p-2" />
           </form>
+          <WeatherInfo />
           <div className="row mt-4">
             <div className="col-4 ms-1 text-center">
               {city}
               <div className="temp-data mt-3">
-                {Math.round(data.temp)}
+                Tempature:{Math.round(data.temp)} °C
                 <br />
-                day
+                <FormattedDate date={data.date} />
                 <br />
                 date
                 <br />
