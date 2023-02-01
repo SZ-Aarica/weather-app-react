@@ -42,8 +42,8 @@ export default function Weather(props) {
   if (data.ready) {
     return (
       <div className="container">
-        <div className="Weather  border border-primary">
-          <form className="m-3 hi" onSubmit={handleSubmit}>
+        <div className="Weather   ">
+          <form className="m-3" onSubmit={handleSubmit}>
             <input type="submit" value="🔍" className="p-2 submit" />
             <input
               type="serach"
@@ -54,7 +54,12 @@ export default function Weather(props) {
           </form>
           
           <WeatherInfo data={data} city={city} />
+          
         </div>
+      <footer>
+        git reposetory
+      </footer>
+        
       </div>
     );
   } else {

@@ -1,7 +1,23 @@
+:root{
+  
+--base-color:#679186;
+
+}
 .Weather {
   margin: 0 auto;
   max-width: 850px;
+  padding-top: 5px;
+  background-color: var(--base-color);
+  border: none;
 }
 .Weather .submit {
   margin-left: 80px;
+}
+.container {
+}
+input{
+background-color: #ffb4ac;
+}
+footer{
+  text-align: center;
 }
