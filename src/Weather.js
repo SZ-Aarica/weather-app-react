@@ -1,26 +1,28 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "./Weather.css";
-
 import axios from "axios";
+
 
 import WeatherInfo from "./WeatherInfo";
 import { MagnifyingGlass } from "react-loader-spinner";
 
 export default function Weather(props) {
-  const [data, setData] = useState({ set: false });
-  const [city, setCity] = useState(props.city);
+  const [city, setCity] = useState(props.Defualtcity);
+  const [data, setData] = useState({ ready: false });
+
   function handleSubmit(event) {
-    event.oreventDefault();
+    event.preventDefault();
     search();
   }
+
   function updateCity(event) {
     setCity(event.target.value);
   }
 
   function displayDescription(response) {
     setData({
-      set: true,
+      ready: true,
       temp: response.data.main.temp,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
@@ -36,25 +38,28 @@ export default function Weather(props) {
     axios.get(apiUrl).then(displayDescription);
   }
 
-  if (data.set) {
+
+  if (data.ready) {
     return (
       <div className="container">
         <div className="Weather  border border-primary">
           <form className="m-3 hi" onSubmit={handleSubmit}>
+            <input type="submit" value="🔍" className="p-2 submit" />
             <input
-              type="submit"
-              value="🔍"
-              className="p-2 submit"
+              type="serach"
+              placeholder="search a city"
+              className="p-2"
               onChange={updateCity}
             />
-            <input type="serach" placeholder="search a city" className="p-2" />
           </form>
+          
           <WeatherInfo data={data} city={city} />
         </div>
       </div>
     );
   } else {
     search();
+
     return (
       <MagnifyingGlass
         visible={true}
