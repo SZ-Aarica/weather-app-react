@@ -1,7 +1,8 @@
-.Temperature{
-   color: #ffb4ac;
+.Temperature {
+  color: #ffb4ac;
 }
-.unit{
-position: relative;
-top: -31px;
+.unit {
+  position: relative;
+  top: -31px;
+  color: #264e70;
 }
