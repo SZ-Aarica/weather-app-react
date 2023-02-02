@@ -52,16 +52,13 @@ export default function Weather(props) {
               onChange={updateCity}
             />
           </form>
-          
+
           <WeatherInfo data={data} city={city} />
-          
         </div>
-      <footer>
-        this project was coded by saba zahedi 
-        <a>GitHub</a>
-       
-      </footer>
-        
+        <footer>
+          this project was coded by saba zahedi
+          <a href="https://github.com/SZ-Aarica/weather-app-react">GitHub</a>
+        </footer>
       </div>
     );
   } else {
