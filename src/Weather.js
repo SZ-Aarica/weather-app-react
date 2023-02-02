@@ -57,7 +57,9 @@ export default function Weather(props) {
           
         </div>
       <footer>
-        git reposetory
+        this project was coded by saba zahedi 
+        <a>GitHub</a>
+       
       </footer>
         
       </div>
