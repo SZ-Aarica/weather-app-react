@@ -57,7 +57,7 @@ export default function Weather(props) {
         </div>
         <footer>
           this project was coded by saba zahedi
-          <a href="https://github.com/SZ-Aarica/weather-app-react">GitHub</a>
+          <a href="https://github.com/SZ-Aarica/weather-app-react"> GitHub</a>
         </footer>
       </div>
     );

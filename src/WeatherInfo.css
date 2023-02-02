@@ -1,11 +1,18 @@
+:root{
+  --font-color:  #264e70;
+}
 .forcast{
   background-color:  #ffebd3;
   color: #264e70;
 }
 .city{
     background-color: #ffebd3;
-      color: #264e70;
+          color: var(--font-color);
     padding: 5px;
     margin-left: 25px;
     margin-right: 25px;
+}
+.data{
+     color: var(--font-color);
+     font-size: 20px;
 }
