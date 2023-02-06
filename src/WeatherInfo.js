@@ -28,11 +28,11 @@ export default function WeatherInfo(props) {
           <button className="mb-4 p-1">current location</button>
           <div className="pic mb-3 ">
             {" "}
-            <WeatherIcone code={props.data.icon} size={100}/>
+            <WeatherIcone code={props.data.icon} size={100} />
           </div>
         </div>
         <div className="col-3 mb-3 text-center forcast">
-          <WeatherForcast />
+          <WeatherForcast coordinates={props.data.coordinates} />
         </div>
       </div>
     </div>
