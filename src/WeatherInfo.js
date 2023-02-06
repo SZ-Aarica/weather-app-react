@@ -10,7 +10,7 @@ export default function WeatherInfo(props) {
     <div className="WeatherInfo ">
       <div className="row mt-4">
         <div className="col-4 ms-1 text-center ">
-          <div className="city"> {props.city}</div>
+          <div className="city"> {props.data.city}</div>
 
           <WeatherTemperature celsius={props.data.temp} />
 

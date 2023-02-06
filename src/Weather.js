@@ -29,6 +29,7 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
       date: new Date(response.data.dt * 1000),
+      city: response.data.name,
     });
   }
 
@@ -53,7 +54,7 @@ export default function Weather(props) {
             />
           </form>
 
-          <WeatherInfo data={data} city={city} />
+          <WeatherInfo data={data}  />
         </div>
         <footer>
           this project was coded by saba zahedi
