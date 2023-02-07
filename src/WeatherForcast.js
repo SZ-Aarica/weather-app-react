@@ -7,6 +7,7 @@ import WeatherForcastDay from "./WeatherForcastDay";
 export default function WeatherForcast(props) {
   const [ready, setReady] = useState(false);
   let [forcast, setForcast] = useState(null);
+
   function handleResponse(response) {
     setForcast(response.data.daily);
     leaded();
@@ -20,11 +21,22 @@ export default function WeatherForcast(props) {
     axios.get(apiUrl).then(handleResponse);
   }
 
+  useEffect(() => {
+    setReady(false);
+  }, [props.coordinates]);
+
   if (ready) {
     return (
       <div className="WeatherForcast">
-       
-        <WeatherForcastDay data={forcast[0]}/>
+        {forcast.map(function (dailyForcast, index) {
+          if (index < 6) {
+            return (
+              <div key={index}>
+                <WeatherForcastDay data={dailyForcast} />
+              </div>
+            );
+          }
+        })}
       </div>
     );
   } else {

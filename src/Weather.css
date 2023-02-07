@@ -1,7 +1,5 @@
-:root{
-  
---base-color:#679186;
-
+:root {
+  --base-color: #679186;
 }
 .Weather {
   margin: 0 auto;
@@ -14,10 +12,14 @@
   margin-left: 80px;
 }
 
-input{
-background-color: #ffb4ac;
+input {
+  background-color: #ffb4ac;
+  font-size: 25px;
+  margin-bottom: 20px;
+
 }
-footer{
+footer {
   text-align: center;
-  color:  #264e70;;
+  color: #264e70;
 }
+
