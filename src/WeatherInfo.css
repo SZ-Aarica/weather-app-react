@@ -32,16 +32,4 @@
       padding-right: 20px;
      box-shadow: var(--shadow);
 }
-button{
- background-color:#ffb4ac;
- border: 0px;
- border-radius: 15px;
-box-shadow: var(--shadow);
-color:#679186;
-font-weight: 500;
-font-size: 20px;
-}
-button:hover{
-  background-color: var(--backround);
-  color: var(--font-color);
-}
+
