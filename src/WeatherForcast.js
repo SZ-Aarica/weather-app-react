@@ -36,6 +36,7 @@ export default function WeatherForcast(props) {
               </div>
             );
           }
+          return null;
         })}
       </div>
     );
