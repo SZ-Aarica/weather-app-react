@@ -9,7 +9,7 @@ export default function WeatherTemperature(props) {
     setUnit("fahrenheit");
   }
   function Calculatefahrenheit() {
-    return props.celsius * 9.5 + 32;
+    return props.celsius * 9/5 + 32;
   }
   function celsius(event) {
     event.preventDefault();
